@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fit_propers",
+  "info": {
+    "singularName": "fit-proper",
+    "pluralName": "fit-propers",
+    "displayName": "FitProper",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_nilai_fitpropet": {
+      "type": "integer"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "fit_propers"
+    },
+    "penilaians": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penilaian.penilaian",
+      "inversedBy": "fit_propers"
+    },
+    "peserta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::peserta.peserta",
+      "inversedBy": "fit_proper"
+    },
+    "key_factors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::key-factor.key-factor",
+      "inversedBy": "fit_propers"
+    }
+  }
+}

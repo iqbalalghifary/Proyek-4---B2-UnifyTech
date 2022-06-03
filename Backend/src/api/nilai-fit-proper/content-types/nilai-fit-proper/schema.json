@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilai_fit_propers",
+  "info": {
+    "singularName": "nilai-fit-proper",
+    "pluralName": "nilai-fit-propers",
+    "displayName": "nilaiFitProper",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai": {
+      "type": "integer"
+    },
+    "uraian_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uraian-penilaian.uraian-penilaian",
+      "mappedBy": "nilai_fit_proper"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::penguji.penguji"
+    },
+    "total_nilai_fp": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-nilai-fp.total-nilai-fp",
+      "inversedBy": "nilai_fit_proper"
+    },
+    "total_seluruh": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-seluruh.total-seluruh",
+      "inversedBy": "nilai_fit_proper"
+    },
+    "pendaftar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pendaftar.pendaftar",
+      "inversedBy": "nilai_fit_propers"
+    }
+  }
+}

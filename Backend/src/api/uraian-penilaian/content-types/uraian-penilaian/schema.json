@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uraian_penilaians",
+  "info": {
+    "singularName": "uraian-penilaian",
+    "pluralName": "uraian-penilaians",
+    "displayName": "uraian_penilaian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_uraian_penilaian": {
+      "type": "string"
+    },
+    "aspek_penilaian": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::aspek-penilaian.aspek-penilaian",
+      "inversedBy": "uraian_penilaians"
+    },
+    "key_factor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::key-factor.key-factor",
+      "inversedBy": "uraian_penilaians"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::penguji.penguji",
+      "inversedBy": "uraian_penilaians"
+    },
+    "nilai_fit_proper": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nilai-fit-proper.nilai-fit-proper",
+      "inversedBy": "uraian_penilaians"
+    },
+    "nilai_wwc": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nilai-wwc.nilai-wwc",
+      "inversedBy": "uraian_penilaians"
+    }
+  }
+}

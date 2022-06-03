@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pendaftaran_wawancaras",
+  "info": {
+    "singularName": "pendaftaran-wawancara",
+    "pluralName": "pendaftaran-wawancaras",
+    "displayName": "PendaftaranWawancara",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uraian_jabatan_wwc": {
+      "type": "string"
+    },
+    "proyeksi_jabatan_wwc": {
+      "type": "string"
+    },
+    "jenjang_jabatan_wwc": {
+      "type": "string"
+    },
+    "tanggal_wwc": {
+      "type": "date"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
+      "inversedBy": "pendaftaran_wawancaras"
+    },
+    "wawancaras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wawancara.wawancara",
+      "inversedBy": "pendaftaran_wawancaras"
+    },
+    "peserta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::peserta.peserta",
+      "inversedBy": "pendaftaran_wawancaras"
+    },
+    "file_cv_wwc": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "file_ppt_wwc": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "nilai_wwc": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nilai-wwc.nilai-wwc",
+      "inversedBy": "pendaftaran_wawancaras"
+    },
+    "total_seluruh": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-seluruh.total-seluruh",
+      "inversedBy": "pendaftaran_wawancara"
+    },
+    "total_nilai_wwc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-nilai-wwc.total-nilai-wwc",
+      "inversedBy": "pendaftaran_wawancara"
+    }
+  }
+}

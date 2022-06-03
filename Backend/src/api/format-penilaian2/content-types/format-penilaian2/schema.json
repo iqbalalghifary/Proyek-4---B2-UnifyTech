@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "format_penilaian2s",
+  "info": {
+    "singularName": "format-penilaian2",
+    "pluralName": "format-penilaian2s",
+    "displayName": "Format_Penilaian2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Aspek_Penilaian": {
+      "type": "string"
+    },
+    "Nilai": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wawancaras",
+  "info": {
+    "singularName": "wawancara",
+    "pluralName": "wawancaras",
+    "displayName": "Wawancara"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_nilai_wawancara": {
+      "type": "integer"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "wawancaras"
+    },
+    "penilaians": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penilaian.penilaian",
+      "inversedBy": "wawancaras"
+    },
+    "pendaftaran_wawancaras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pendaftaran-wawancara.pendaftaran-wawancara",
+      "mappedBy": "wawancaras"
+    }
+  }
+}

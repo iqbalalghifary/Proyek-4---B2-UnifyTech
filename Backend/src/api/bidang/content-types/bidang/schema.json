@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bidangs",
+  "info": {
+    "singularName": "bidang",
+    "pluralName": "bidangs",
+    "displayName": "bidang",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_bidang": {
+      "type": "string"
+    },
+    "pegawais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "bidang"
+    },
+    "divisi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::divisi.divisi",
+      "inversedBy": "bidang"
+    },
+    "sub_bidang": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sub-bidang.sub-bidang",
+      "inversedBy": "bidang"
+    }
+  }
+}

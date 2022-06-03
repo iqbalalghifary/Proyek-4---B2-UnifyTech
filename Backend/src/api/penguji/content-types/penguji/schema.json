@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pengujis",
+  "info": {
+    "singularName": "penguji",
+    "pluralName": "pengujis",
+    "displayName": "Penguji",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fit_propers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fit-proper.fit-proper",
+      "inversedBy": "pengujis"
+    },
+    "wawancaras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wawancara.wawancara",
+      "inversedBy": "pengujis"
+    },
+    "pegawai": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pegawai.pegawai",
+      "inversedBy": "pengujis"
+    },
+    "pendaftars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "pengujis"
+    },
+    "pendaftaran_wawancaras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pendaftaran-wawancara.pendaftaran-wawancara",
+      "mappedBy": "pengujis"
+    },
+    "uraian_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uraian-penilaian.uraian-penilaian",
+      "mappedBy": "penguji"
+    },
+    "nilai_wwc": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nilai-wwc.nilai-wwc",
+      "inversedBy": "pengujis"
+    }
+  }
+}

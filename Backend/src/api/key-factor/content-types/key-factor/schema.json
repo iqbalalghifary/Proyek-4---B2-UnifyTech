@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_factors",
+  "info": {
+    "singularName": "key-factor",
+    "pluralName": "key-factors",
+    "displayName": "key_factor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pendaftars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pendaftar.pendaftar",
+      "inversedBy": "key_factors"
+    },
+    "nama_key_factor": {
+      "type": "string"
+    },
+    "aspek_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::aspek-penilaian.aspek-penilaian",
+      "mappedBy": "key_factor"
+    },
+    "uraian_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uraian-penilaian.uraian-penilaian",
+      "mappedBy": "key_factor"
+    },
+    "fit_propers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fit-proper.fit-proper",
+      "inversedBy": "key_factors"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pendaftars",
+  "info": {
+    "singularName": "pendaftar",
+    "pluralName": "pendaftars",
+    "displayName": "Pendaftar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "urjab": {
+      "type": "string"
+    },
+    "penilaians": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penilaian.penilaian",
+      "inversedBy": "pendaftars"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::penguji.penguji",
+      "inversedBy": "pendaftars"
+    },
+    "Jenis_FitnProper": {
+      "type": "string"
+    },
+    "proyeksi_jabatan": {
+      "type": "string"
+    },
+    "jenjang_jabatan": {
+      "type": "string"
+    },
+    "tangal": {
+      "type": "date"
+    },
+    "peserta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::peserta.peserta",
+      "mappedBy": "pendaftar"
+    },
+    "key_factors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::key-factor.key-factor",
+      "mappedBy": "pendaftars"
+    },
+    "file_ppt": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "file_cv": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "nilai_fit_propers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai-fit-proper.nilai-fit-proper",
+      "mappedBy": "pendaftar"
+    },
+    "total_nilai_fp": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-nilai-fp.total-nilai-fp",
+      "inversedBy": "pendaftar"
+    },
+    "total_seluruh": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-seluruh.total-seluruh",
+      "inversedBy": "pendaftar"
+    }
+  }
+}

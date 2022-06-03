@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "penilaians",
+  "info": {
+    "singularName": "penilaian",
+    "pluralName": "penilaians",
+    "displayName": "Penilaian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wawancaras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wawancara.wawancara",
+      "inversedBy": "penilaians"
+    },
+    "pendaftars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "penilaians"
+    },
+    "fit_propers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fit-proper.fit-proper",
+      "mappedBy": "penilaians"
+    },
+    "total_penilaian": {
+      "type": "integer"
+    }
+  }
+}

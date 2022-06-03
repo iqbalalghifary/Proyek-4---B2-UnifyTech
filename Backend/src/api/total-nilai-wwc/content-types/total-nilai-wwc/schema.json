@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_nilai_wwcs",
+  "info": {
+    "singularName": "total-nilai-wwc",
+    "pluralName": "total-nilai-wwcs",
+    "displayName": "Total_nilaiWwc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai_wwc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nilai-wwc.nilai-wwc",
+      "inversedBy": "total_nilai_wwc"
+    },
+    "pendaftaran_wawancara": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pendaftaran-wawancara.pendaftaran-wawancara",
+      "inversedBy": "total_nilai_wwc"
+    }
+  }
+}

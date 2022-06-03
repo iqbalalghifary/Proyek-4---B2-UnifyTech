@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "unit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_unit": {
+      "type": "string"
+    },
+    "pegawais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "unit"
+    },
+    "jabatans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "units"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilais",
+  "info": {
+    "singularName": "nilai",
+    "pluralName": "nilais",
+    "displayName": "nilai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai": {
+      "type": "integer"
+    }
+  }
+}

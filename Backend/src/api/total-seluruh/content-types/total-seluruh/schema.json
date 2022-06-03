@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_seluruhs",
+  "info": {
+    "singularName": "total-seluruh",
+    "pluralName": "total-seluruhs",
+    "displayName": "total_seluruh"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pendaftar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "total_seluruh"
+    },
+    "nilai_fit_proper": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nilai-fit-proper.nilai-fit-proper",
+      "inversedBy": "total_seluruh"
+    },
+    "nilai_wwc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nilai-wwc.nilai-wwc",
+      "inversedBy": "total_seluruh"
+    },
+    "pendaftaran_wawancara": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pendaftaran-wawancara.pendaftaran-wawancara",
+      "inversedBy": "total_seluruh"
+    }
+  }
+}

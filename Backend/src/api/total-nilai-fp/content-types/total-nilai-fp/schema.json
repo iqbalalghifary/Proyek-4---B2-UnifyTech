@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_nilai_fps",
+  "info": {
+    "singularName": "total-nilai-fp",
+    "pluralName": "total-nilai-fps",
+    "displayName": "total_nilaiFP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai_fit_proper": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nilai-fit-proper.nilai-fit-proper",
+      "inversedBy": "total_nilai_fp"
+    },
+    "pendaftar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "total_nilai_fp"
+    }
+  }
+}

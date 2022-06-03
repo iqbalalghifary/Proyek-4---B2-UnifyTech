@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilai_wwcs",
+  "info": {
+    "singularName": "nilai-wwc",
+    "pluralName": "nilai-wwcs",
+    "displayName": "NilaiWwc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai": {
+      "type": "integer"
+    },
+    "uraian_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uraian-penilaian.uraian-penilaian",
+      "mappedBy": "nilai_wwc"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "nilai_wwc"
+    },
+    "pendaftaran_wawancaras": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pendaftaran-wawancara.pendaftaran-wawancara",
+      "mappedBy": "nilai_wwc"
+    },
+    "total_nilai_wwc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-nilai-wwc.total-nilai-wwc",
+      "mappedBy": "nilai_wwc"
+    },
+    "total_seluruh": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::total-seluruh.total-seluruh",
+      "inversedBy": "nilai_wwc"
+    }
+  }
+}

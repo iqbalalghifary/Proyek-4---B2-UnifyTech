@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aspek_penilaians",
+  "info": {
+    "singularName": "aspek-penilaian",
+    "pluralName": "aspek-penilaians",
+    "displayName": "aspek_penilaian"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_aspek_penilaian": {
+      "type": "string"
+    },
+    "key_factor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::key-factor.key-factor",
+      "inversedBy": "aspek_penilaians"
+    },
+    "uraian_penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uraian-penilaian.uraian-penilaian",
+      "mappedBy": "aspek_penilaian"
+    }
+  }
+}

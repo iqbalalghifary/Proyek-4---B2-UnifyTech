@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grades",
+  "info": {
+    "singularName": "grade",
+    "pluralName": "grades",
+    "displayName": "grade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pegawais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "grade"
+    },
+    "jenjangs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "grades"
+    },
+    "tingkat_grade": {
+      "type": "string"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "nama_grade": {
+      "type": "string"
+    }
+  }
+}
