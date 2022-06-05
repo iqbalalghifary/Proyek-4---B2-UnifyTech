@@ -15,12 +15,13 @@
 Deployment adalah istilah yang mencakup semua proses yang terlibat dalam mendapatkan software (perangkat lunak) atau hardware (perangkat keras) baru dan berjalan dengan baik di lingkungannya, termasuk instalasi, konfigurasi, pengoperasian, pengujian dan membuat perubahan yang diperlukan.
 
 # Step by step how to deploy website FP. PLN
-1. Siapkan project aplikasi web
-   - Untuk langkah awal, dikami menyiapkan satu aplikasi web FP. PLN yang akan kita deploy. Aplikasi web ini bisa berinteraksi dengan user
-2. Menentukan metode deployment.
-   - Blue/Green Deployment Strategy. Kami memilih metode ini dikarenakan konsepnya cukup sederhana, pertama-tama, kita akan membuat satu environment yang serupa dengan yang sedang aktif/live, kemudian kita pun melakukan switching request ke environment baru tersebut. Meskipun terdapat beberapa kekurangan, namun kami menyadari bahwa metode ini memiliki kelebihan yang cukup baik diantaranya Perubahan sangat cepat (sekali switch service langsung berubah 100%), Tidak ada issue beda versi pada service seperti yang terjadi pada Rollout Deployment.
-3. Melakukan deployment pada (Github)
-
+1. Install Node js
+2. Siapkan project aplikasi web
+   - Clone source code dari repository ini
+3. Instalasi library.
+  - yarn install ( recomended ) / npm install (alternative)
+4. Running program
+  - NPM start
 
 
 
