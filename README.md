@@ -10,7 +10,7 @@
 5. Nama: Paqih Teguh Maulana, NIM: 201511056, email: paqih.teguh.tif20@polban.ac.id
 6. Nama: Salma Aulia Suherman, NIM: 201511060, email: salma.aulia.tif20@polban.ac.id
 
-# Introduce Deployemnt Diagram
+# Introduce Deployemnt Website FP. PLN
 
 Deployment adalah istilah yang mencakup semua proses yang terlibat dalam mendapatkan software (perangkat lunak) atau hardware (perangkat keras) baru dan berjalan dengan baik di lingkungannya, termasuk instalasi, konfigurasi, pengoperasian, pengujian dan membuat perubahan yang diperlukan.
 
