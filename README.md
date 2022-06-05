@@ -16,9 +16,9 @@ Deployment adalah istilah yang mencakup semua proses yang terlibat dalam mendapa
 
 # Step by step how to deploy website FP. PLN
 1. Siapkan project aplikasi web
-   - Untuk langkah awal, kami menyiapkan satu aplikasi web FP. PLN yang akan kita deploy. Aplikasi web ini bisa berinteraksi dengan user
+   - Untuk langkah awal, dikami menyiapkan satu aplikasi web FP. PLN yang akan kita deploy. Aplikasi web ini bisa berinteraksi dengan user
 2. Menentukan metode deployment.
-   - Blue/Green Deployment Strategy, Konsepnya cukup sederhana, pertama-tama, kita akan membuat satu environment yang serupa dengan yang sedang aktif/live, kemudian kita pun melakukan switching request ke environment baru tersebut. Meskipun terdapat beberapa kekurangan, namun kami menyadari bahwa metode ini memiliki kelebihan yang cukup baik diantaranya Perubahan sangat cepat (sekali switch service langsung berubah 100%), Tidak ada issue beda versi pada service seperti yang terjadi pada Rollout Deployment.
+   - Blue/Green Deployment Strategy. Kami memilih metode ini dikarenakan konsepnya cukup sederhana, pertama-tama, kita akan membuat satu environment yang serupa dengan yang sedang aktif/live, kemudian kita pun melakukan switching request ke environment baru tersebut. Meskipun terdapat beberapa kekurangan, namun kami menyadari bahwa metode ini memiliki kelebihan yang cukup baik diantaranya Perubahan sangat cepat (sekali switch service langsung berubah 100%), Tidak ada issue beda versi pada service seperti yang terjadi pada Rollout Deployment.
 3. Melakukan deployment pada (Github)
 
 
