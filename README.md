@@ -1,3 +1,4 @@
+
 ## Proyek-4 <B2-UnifyTech/>
 
 # Data Kelompok:
@@ -9,12 +10,15 @@
 5. Nama: Paqih Teguh Maulana, NIM: 201511056, email: paqih.teguh.tif20@polban.ac.id
 6. Nama: Salma Aulia Suherman, NIM: 201511060, email: salma.aulia.tif20@polban.ac.id
 
-# Deployemnt Diagram
+# Introduce Deployemnt Diagram
 
-Deployment diagram salah satu model diagram dalam UML untuk mengerahkan artefak dalam node. Fungsinya untuk menggambarkan, memvisualisasikan, menspesifikasikan serta mendokumentasikan suatu proses yang terjadi dalam sebuah sistem berbasis OOP (Object Oriented Programming) yang akan dibangun. Seperti pada gambar diatas, package userClient berkomunikasi (Communication Path) dengan WebServer. Keduanya berkoneksi atau berasosiasi yang menghubungkan antara dua deployment target, hal tersebut dilakukan dengan pertukaran sinyal, satu mengirimkan yang satu menerimanya. terakhir pada node WebServer berkomunikasi dengan Rest API menggunakan Postman yang nantinya akan berhubungan dengan node StrapiServer yang berisi database pada Strapi. 
+Deployment adalah istilah yang mencakup semua proses yang terlibat dalam mendapatkan software (perangkat lunak) atau hardware (perangkat keras) baru dan berjalan dengan baik di lingkungannya, termasuk instalasi, konfigurasi, pengoperasian, pengujian dan membuat perubahan yang diperlukan.
 
 # Step by step how to deploy website FP. PLN
-
+1. Siapkan project aplikasi web
+   - Untuk langkah awal, kami menyiapkan satu aplikasi web FP. PLN yang akan kita deploy. Aplikasi web ini bisa berinteraksi dengan user
+3. Menentukan metode deployment.
+   - Blue/Green Deployment Strategy 
 
 
 
